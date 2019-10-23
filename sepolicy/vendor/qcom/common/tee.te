@@ -38,3 +38,5 @@ allow tee hal_display_config_hwservice:hwservice_manager find;
 
 # allow tee access for secure UI to work
 allow tee graphics_device:chr_file rw_file_perms;
+allow tee rpmb_device:chr_file rw_file_perms;
+allowxperm tee rpmb_device:chr_file ioctl { MMC_IOC_CMD MMC_IOC_MULTI_CMD };
