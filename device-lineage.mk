@@ -19,6 +19,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
     ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
 
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.camera.hdrplus.disable=1
+
 # Elmyra
 PRODUCT_PACKAGES += \
     ElmyraService
