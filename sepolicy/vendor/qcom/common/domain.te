@@ -8,3 +8,6 @@ allow domain debugfs_ion:dir search;
 
 get_prop(domain, public_vendor_default_prop)
 get_prop(domain, vendor_radio_prop)
+
+allow { domain - isolated_app_all } sysfs_msm_subsys:dir search;
+allow { domain - isolated_app_all } sysfs_kgsl_gpu_model:file r_file_perms;
