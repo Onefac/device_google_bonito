@@ -104,6 +104,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.supports_background_blur=1 \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
