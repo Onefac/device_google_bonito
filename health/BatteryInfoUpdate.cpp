@@ -25,12 +25,15 @@ namespace google {
 namespace bonito {
 namespace health {
 
+using aidl::android::hardware::health::BatteryStatus;
+using aidl::android::hardware::health::HealthInfo;
+
 BatteryInfoUpdate::BatteryInfoUpdate() {
 }
 
-void BatteryInfoUpdate::update(struct android::BatteryProperties *props) {
-    if (props->batteryStatus == android::BATTERY_STATUS_NOT_CHARGING)
-        props->batteryStatus = android::BATTERY_STATUS_DISCHARGING;
+void BatteryInfoUpdate::update(HealthInfo *health_info) {
+    if (health_info->batteryStatus == BatteryStatus::NOT_CHARGING)
+        health_info->batteryStatus = BatteryStatus::DISCHARGING;
 
 }
 

@@ -17,7 +17,7 @@
 #ifndef DEVICE_GOOGLE_BONITO_HEALTH_BATTERYINFOUPDATE_H
 #define DEVICE_GOOGLE_BONITO_HEALTH_BATTERYINFOUPDATE_H
 
-#include <batteryservice/BatteryService.h>
+#include <aidl/android/hardware/health/HealthInfo.h>
 
 namespace device {
 namespace google {
@@ -27,7 +27,7 @@ namespace health {
 class BatteryInfoUpdate {
   public:
     BatteryInfoUpdate();
-    void update(struct android::BatteryProperties *props);
+    void update(aidl::android::hardware::health::HealthInfo *health_info);
 
   private:
 };
