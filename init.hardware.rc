@@ -272,9 +272,6 @@ on zygote-start
     chown root system /mnt/vendor/persist/
     chmod 0771 /mnt/vendor/persist/
 
-    # Trigger WLAN driver load
-    write /sys/kernel/boot_wlan/boot_wlan 1
-
     #create netmgr log dir
     mkdir /data/vendor/netmgr 0771 radio radio
     chmod 0771 /data/vendor/netmgr
