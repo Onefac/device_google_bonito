@@ -5,7 +5,7 @@ service vendor.health-bonito /vendor/bin/hw/android.hardware.health-service.boni
     capabilities WAKE_ALARM BLOCK_SUSPEND
     file /dev/kmsg w
 
-service vendor.charger-bonito /vendor/bin/hw/android.hardware.health-service.bonito --charger
+service vendor.charger /vendor/bin/hw/android.hardware.health-service.bonito --charger
     class charger
     seclabel u:r:charger_vendor:s0
     user system
