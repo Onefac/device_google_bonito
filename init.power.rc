@@ -28,22 +28,23 @@ on property:sys.boot_completed=1
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/up_scale 250
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/idle_mbps 1600
 
-    write /sys/class/devfreq/soc:qcom,mincpubw/governor "cpufreq"
+    write /sys/class/devfreq/soc:qcom,cpu0-cpu-ddr-latfloor/governor "compute"
+    write /sys/class/devfreq/soc:qcom,cpu6-cpu-ddr-latfloor/governor "compute"
 
     # Enable memlat governor
-    write /sys/class/devfreq/soc:qcom,memlat-cpu0/governor "mem_latency"
-    write /sys/class/devfreq/soc:qcom,memlat-cpu0/polling_interval 10
-    write /sys/class/devfreq/soc:qcom,memlat-cpu0/mem_latency/ratio_ceil 400
-    write /sys/class/devfreq/soc:qcom,memlat-cpu6/governor "mem_latency"
-    write /sys/class/devfreq/soc:qcom,memlat-cpu6/polling_interval 10
-    write /sys/class/devfreq/soc:qcom,memlat-cpu6/mem_latency/ratio_ceil 400
+    write /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/governor "mem_latency"
+    write /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/polling_interval 10
+    write /sys/class/devfreq/soc:qcom,cpu0-cpu-llcc-lat/mem_latency/ratio_ceil 400
+    write /sys/class/devfreq/soc:qcom,cpu6-cpu-llcc-lat/governor "mem_latency"
+    write /sys/class/devfreq/soc:qcom,cpu6-cpu-llcc-lat/polling_interval 10
+    write /sys/class/devfreq/soc:qcom,cpu6-cpu-llcc-lat/mem_latency/ratio_ceil 400
 
-    write /sys/class/devfreq/soc:qcom,l3-cpu0/governor "mem_latency"
-    write /sys/class/devfreq/soc:qcom,l3-cpu0/polling_interval 10
-    write /sys/class/devfreq/soc:qcom,l3-cpu0/mem_latency/ratio_ceil 400
-    write /sys/class/devfreq/soc:qcom,l3-cpu6/governor "mem_latency"
-    write /sys/class/devfreq/soc:qcom,l3-cpu6/polling_interval 10
-    write /sys/class/devfreq/soc:qcom,l3-cpu6/mem_latency/ratio_ceil 400
+    write /sys/class/devfreq/17d41000.qcom,devfreq-l3:qcom,cpu0-cpu-l3-lat/governor "mem_latency"
+    write /sys/class/devfreq/17d41000.qcom,devfreq-l3:qcom,cpu0-cpu-l3-lat/polling_interval 10
+    write /sys/class/devfreq/17d41000.qcom,devfreq-l3:qcom,cpu0-cpu-l3-lat/mem_latency/ratio_ceil 400
+    write /sys/class/devfreq/17d41000.qcom,devfreq-l3:qcom,cpu6-cpu-l3-lat/governor "mem_latency"
+    write /sys/class/devfreq/17d41000.qcom,devfreq-l3:qcom,cpu6-cpu-l3-lat/polling_interval 10
+    write /sys/class/devfreq/17d41000.qcom,devfreq-l3:qcom,cpu6-cpu-l3-lat/mem_latency/ratio_ceil 400
 
     # Limit the min frequency of LC to 576MHz
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 576000
@@ -59,8 +60,8 @@ on property:sys.boot_completed=1
     write /sys/class/drm/card0/device/idle_timeout_ms 100
 
     # Change l3-cdsp to userspace governor
-    write /sys/class/devfreq/soc:qcom,l3-cdsp/governor userspace
-    chown system system /sys/class/devfreq/soc:qcom,l3-cdsp/userspace/set_freq
+    write /sys/class/devfreq/17d41000.qcom,devfreq-l3:qcom,cdsp-cdsp-l3-lat/governor userspace
+    chown system system /sys/class/devfreq/17d41000.qcom,devfreq-l3:qcom,cdsp-cdsp-l3-lat/userspace/set_freq
 
     # Disable CPU Retention
     write /sys/module/lpm_levels/L3/cpu0/ret/idle_enabled N
