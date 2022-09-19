@@ -30,6 +30,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/sdm845/gps \
     hardware/qcom/wlan/legacy \
     hardware/qcom-caf/bootctrl \
+    system/chre/host/hal_generic \
     vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
 
 PRODUCT_PROPERTY_OVERRIDES += \
