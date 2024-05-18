@@ -38,6 +38,7 @@ endif
 # SELinux
 BOARD_SEPOLICY_DIRS += device/google/bonito/sepolicy-lineage/dynamic
 BOARD_SEPOLICY_DIRS += device/google/bonito/sepolicy-lineage/vendor
+include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 
 # Verified Boot
 ifneq (,$(AVB_CUSTOM_KEY_PATH))
