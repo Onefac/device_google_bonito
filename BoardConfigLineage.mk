@@ -18,7 +18,8 @@ BOARD_DTBO_CFG := $(TARGET_KERNEL_SOURCE)/arch/arm64/boot/dts/google/dtboimg.cfg
 
 # Manifests
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml
 
 # Partitions
 AB_OTA_PARTITIONS += \
