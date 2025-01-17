@@ -334,11 +334,7 @@ PRODUCT_PACKAGES += \
 
 # Light HAL
 PRODUCT_PACKAGES += \
-    lights.qcom \
-    hardware.google.light@1.0-service
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.lights=qcom
+    android.hardware.light-service.lineage
 
 # Memtrack HAL
 PRODUCT_PACKAGES += \
