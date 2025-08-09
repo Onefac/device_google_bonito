@@ -16,9 +16,6 @@ TARGET_KERNEL_SOURCE := kernel/google/sdm670
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_DTBO_CFG := $(TARGET_KERNEL_SOURCE)/arch/arm64/boot/dts/google/dtboimg.cfg
 
-# Manifests
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/lineage/config/device_framework_matrix.xml
-
 # Partitions
 AB_OTA_PARTITIONS += \
     vendor
