@@ -28,9 +28,10 @@ namespace_imports = [
     'device/google/bonito',
     'hardware/google/interfaces',
     'hardware/google/pixel',
-    'hardware/qcom/sdm845/display',
     'hardware/qcom/sdm845/gps',
+    'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
+    'vendor/qcom/opensource/display',
 ]
 
 
