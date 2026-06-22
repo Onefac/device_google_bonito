@@ -31,6 +31,8 @@ namespace_imports = [
     'hardware/qcom/sdm845/gps',
     'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
+    'vendor/qcom/opensource/commonsys/display',
+    'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/display',
 ]
 
@@ -50,6 +52,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'product/etc/sysconfig/nexus.xml': blob_fixup()
         .regex_replace('qulacomm', 'qualcomm'),
+    'system/framework/WfdCommon.jar': blob_fixup()
+        .apktool_patch('../blob-patches/WfdCommon.patch'),
     (
         'vendor/bin/hw/android.hardware.identity@1.0-service.citadel',
         'vendor/lib64/android.hardware.identity@1.0-impl.nos.so',
@@ -68,6 +72,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('pixelatoms-cpp.so', 'pixelatoms-cpp-legacy.so'),
     'system_ext/lib64/libsecureuisvc_jni.so': blob_fixup()
         .add_needed('libgui_shim.so'),
+    'system_ext/lib64/libwfdservice.so': blob_fixup()
+        .replace_needed('android.media.audio.common.types-V4-cpp.so', 'android.media.audio.common.types-V5-cpp.so'),
     'vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.fpc': blob_fixup()
         .replace_needed('android.frameworks.stats@1.0.so', 'lineage.frameworks.stats@1.0.so')
         .binary_regex_replace(b'_ZN7android10frameworks5stats', b'_ZN7lineage10frameworks5stats'),
