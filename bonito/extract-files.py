@@ -25,6 +25,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'device/google/bonito',
     'hardware/google/interfaces',
     'hardware/google/pixel',
     'hardware/qcom/sdm845/display',
