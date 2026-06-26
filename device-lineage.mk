@@ -75,6 +75,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     chre_daemon_msm
 
+$(call soong_config_set_bool,chre,chre_daemon_load_into_sensorspd,true)
+
 # Identity credential
 PRODUCT_PACKAGES += \
     android.hardware.identity_credential.xml
