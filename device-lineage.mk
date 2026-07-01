@@ -35,6 +35,9 @@ endif
 # Google Assistant
 PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
 
+# ION
+$(call soong_config_set_bool,libion,legacy_impl,true)
+
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
