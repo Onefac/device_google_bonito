@@ -35,6 +35,9 @@ endif
 # Google Assistant
 PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
 
+# Graphics
+$(call soong_config_set_bool,libui,legacy_gralloc,true)
+
 # ION
 $(call soong_config_set_bool,libion,legacy_impl,true)
 
