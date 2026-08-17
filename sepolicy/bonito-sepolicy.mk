@@ -9,6 +9,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += device/google/bonito/sepolicy/vendor/verizon
 BOARD_VENDOR_SEPOLICY_DIRS += device/google/bonito/sepolicy/tracking_denials
 
 # system_ext
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += device/google/bonito/sepolicy/system_ext/public
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += device/google/bonito/sepolicy/system_ext/private
 
 # Pixel-wide policy
