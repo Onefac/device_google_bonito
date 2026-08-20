@@ -66,8 +66,6 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('android.frameworks.stats-V1-ndk_platform.so', 'android.frameworks.stats-V1-ndk.so')
         .replace_needed('pixelatoms-cpp.so', 'pixelatoms-cpp-legacy.so'),
-    'vendor/bin/hw/vendor.qti.media.c2@1.0-service': blob_fixup()
-        .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
     'system_ext/lib64/libsecureuisvc_jni.so': blob_fixup()
         .add_needed('libgui_shim.so'),
     'vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.fpc': blob_fixup()

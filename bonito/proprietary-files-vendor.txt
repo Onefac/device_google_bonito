@@ -23,7 +23,6 @@ vendor/bin/hw/citadel_updater
 vendor/bin/hw/citadeld
 vendor/bin/hw/init_citadel
 vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/mm-pp-dpps
@@ -158,8 +157,6 @@ vendor/etc/qdcm_calib_data_nt37700f_cmd_mode_dsi_tianma_panel.xml
 vendor/etc/qdcm_calib_data_s6e3fa7_cmd_mode_dsi_sdc_panel.xml
 vendor/etc/qdcm_calib_data_sofef00_cmd_mode_dsi_sdc_panel.xml
 vendor/etc/sap.conf
-vendor/etc/seccomp_policy/codec2.vendor.base.policy
-vendor/etc/seccomp_policy/codec2.vendor.ext.policy
 vendor/etc/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/b4_ak991x_0.json
 vendor/etc/sensors/config/b4_tmd2725_0.json
@@ -443,7 +440,6 @@ vendor/lib/libmulawdec.so
 vendor/lib/liboemcrypto.so
 vendor/lib/libperipheral_client.so
 vendor/lib/libqcbor.so
-vendor/lib/libqcodec2.so
 vendor/lib/libqisl.so
 vendor/lib/libqti-utils.so
 vendor/lib/libqtikeymaster4.so
@@ -670,7 +666,6 @@ vendor/lib64/liboemcrypto.so
 vendor/lib64/libperipheral_client.so
 vendor/lib64/libpower_anomaly_data.so
 vendor/lib64/libqcbor.so
-vendor/lib64/libqcodec2.so
 vendor/lib64/libqisl.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/libqtikeymaster4.so
@@ -931,3 +926,14 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|727f8f808cd2e41f7288d
 # RPMB - from laurel_sprout - RKQ1.200903.002
 vendor/lib/librpmb.so|cc130e0fe71d21122be8170b3f51bf9dae244d4b
 vendor/lib64/librpmb.so|a71c4f5bd6df0744a09e951a1fe55213391b8acd
+
+# Codec2 - from munch-user 14 RKQ1.211001.001 OS1.0.5.0.ULMMIXM release-keys
+vendor/bin/hw/vendor.qti.media.c2@1.0-service|c170ebc5a0416f609186639125132b87a5650ef8
+vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy|9f6a77271971618b555d41d83e5c55f3cff684d2
+vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy|a134d3d5d74294ca8164056b42389b1c7dbb2b65
+vendor/lib/libqcodec2_base.so|5bec0dec355c90d2a9739105b6d9810291ab9995
+vendor/lib/libqcodec2_basecodec.so|a517b6a89bf54d58c46758621c6dce9056cb92f7
+vendor/lib/libqcodec2_core.so|b92991b36af312411eb4779fea1a5c22550c1d56
+vendor/lib/libqcodec2_platform.so|fccd9c509fbfda6a72299d90d8d680885a1238ec
+vendor/lib/libqcodec2_utils.so|485acb30246d20a1cfb0c91a9b3e185338d41d17
+vendor/lib/libqcodec2_v4l2codec.so|67057e81477e4b3432997b9d269e3db39c50e421
