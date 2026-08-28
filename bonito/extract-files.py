@@ -67,6 +67,9 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('pixelatoms-cpp.so', 'pixelatoms-cpp-legacy.so'),
     'vendor/bin/hw/vendor.qti.media.c2@1.0-service': blob_fixup()
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
+    'vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.fpc': blob_fixup()
+        .replace_needed('android.frameworks.stats@1.0.so', 'lineage.frameworks.stats@1.0.so')
+        .binary_regex_replace(b'_ZN7android10frameworks5stats', b'_ZN7lineage10frameworks5stats'),
     'vendor/lib64/android.hardware.keymaster@4.1-impl.nos.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
