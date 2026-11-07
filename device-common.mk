@@ -93,15 +93,6 @@ PRODUCT_COPY_FILES += \
 # and sargo targets
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
-PRODUCT_PACKAGES += \
-    check_dynamic_partitions \
-
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_product=true \
-    POSTINSTALL_PATH_product=bin/check_dynamic_partitions \
-    FILESYSTEM_TYPE_product=ext4 \
-    POSTINSTALL_OPTIONAL_product=false \
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.protected_contents=true \
     ro.surface_flinger.use_color_management=true \
