@@ -335,8 +335,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt \
     $(LOCAL_PATH)/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini \
 
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.hwcomposer=qcom
+
 PRODUCT_PACKAGES += \
-    hwcomposer.$(TARGET_CHIPSET) \
+    hwcomposer.qcom \
     android.hardware.graphics.composer@2.2-service \
     gralloc.$(TARGET_CHIPSET) \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
