@@ -31,6 +31,9 @@ endif
 # Google Assistant
 PRODUCT_PRODUCT_PROPERTIES += ro.opa.eligible_device=true
 
+# Kernel
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # Lineage Health
 include hardware/google/pixel/lineage_health/device.mk
 
