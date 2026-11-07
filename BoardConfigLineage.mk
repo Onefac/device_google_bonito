@@ -5,14 +5,16 @@
 #
 
 # Kernel
-BOARD_KERNEL_IMAGE_NAME := Image.lz4
+BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_COMPILE_WITH_MSM_KERNEL := true
-TARGET_KERNEL_CLANG_VERSION := r416183b
-TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
-TARGET_KERNEL_CONFIG := bonito_defconfig
-TARGET_KERNEL_LLVM_BINUTILS := false
-TARGET_KERNEL_SOURCE := kernel/google/msm-4.9
-TARGET_NEEDS_DTBOIMAGE := true
+TARGET_KERNEL_CLANG_VERSION := r547379
+TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/host/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
+TARGET_KERNEL_CONFIG := vendor/sdm670-perf_defconfig vendor/b4s4.config
+TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1 LLVM_IAS=1 KCFLAGS=-Wno-unused-function
+TARGET_KERNEL_SOURCE := kernel/google/sdm670
+
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_DTBO_CFG := $(TARGET_KERNEL_SOURCE)/arch/arm64/boot/dts/google/dtboimg.cfg
 
 # Manifests
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/lineage/config/device_framework_matrix.xml
