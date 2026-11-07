@@ -56,6 +56,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.apk_verity.mode=1
 
 PRODUCT_PACKAGES += \
+    vendor_firmware_mnt_mountpoint
+
+PRODUCT_PACKAGES += \
     messaging
 
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
