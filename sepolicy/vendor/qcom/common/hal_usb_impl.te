@@ -15,3 +15,5 @@ allow hal_usb_impl configfs:file create_file_perms;
 
 set_prop(hal_usb_impl, vendor_usb_config_prop)
 get_prop(hal_usb_impl, vendor_usb_prop)
+r_dir_file(hal_usb_impl, sysfs_typec)
+allow hal_usb_impl sysfs_typec:file w_file_perms;
