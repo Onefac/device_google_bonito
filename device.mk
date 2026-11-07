@@ -385,7 +385,8 @@ PRODUCT_COPY_FILES += \
 
 # USB HAL
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.bonito
+    android.hardware.usb-service.bonito \
+    pixelatoms-cpp
 PRODUCT_PACKAGES += \
     android.hardware.usb.gadget-service.bonito
 
