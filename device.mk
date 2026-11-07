@@ -441,10 +441,6 @@ PRODUCT_PACKAGES += \
     fs_config_dirs \
     fs_config_files
 
-# Context hub HAL
-PRODUCT_PACKAGES += \
-    android.hardware.contexthub@1.2-service.generic
-
 # CHRE tools
 ifneq (,$(filter eng, $(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
