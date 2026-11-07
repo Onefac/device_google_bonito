@@ -1,0 +1,11 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libframeworks_stats_shim",
+    srcs: ["frameworks_stats_shim.cpp"],
+    shared_libs: ["libutils"],
+    vendor: true,
+}

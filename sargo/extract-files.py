@@ -25,6 +25,7 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
+    'device/google/bonito',
     'hardware/google/interfaces',
     'hardware/google/pixel',
     'hardware/qcom/sdm845/display',
@@ -64,6 +65,8 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('android.frameworks.stats-V1-ndk_platform.so', 'android.frameworks.stats-V1-ndk.so')
         .replace_needed('pixelatoms-cpp.so', 'pixelatoms-cpp-legacy.so'),
+    'vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.fpc': blob_fixup()
+        .replace_needed('android.frameworks.stats@1.0.so', 'libframeworks_stats_shim.so'),
     'vendor/bin/hw/vendor.qti.media.c2@1.0-service': blob_fixup()
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
     'vendor/lib64/android.hardware.keymaster@4.1-impl.nos.so': blob_fixup()
