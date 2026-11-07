@@ -12,7 +12,9 @@ TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/host/$(HOST_PREBUILT_TA
 TARGET_KERNEL_CONFIG := vendor/sdm670-perf_defconfig vendor/b4s4.config
 TARGET_KERNEL_ADDITIONAL_FLAGS := LLVM=1 LLVM_IAS=1 KCFLAGS=-Wno-unused-function
 TARGET_KERNEL_SOURCE := kernel/google/sdm670
-TARGET_NEEDS_DTBOIMAGE := true
+
+AB_OTA_PARTITIONS := $(filter-out dtbo,$(AB_OTA_PARTITIONS))
+BOARD_DTBOIMG_PARTITION_SIZE :=
 
 # Manifests
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/lineage/config/device_framework_matrix.xml
