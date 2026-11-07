@@ -30,6 +30,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/sdm845/gps \
     hardware/qcom/wlan/legacy \
     hardware/qcom-caf/bootctrl \
+    hardware/lineage/interfaces/power-libperfmgr \
     system/chre/host/hal_generic \
     vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
 
@@ -715,5 +716,6 @@ include device/google/gs-common/thermal/thermal_hal/device.mk
 # Citadel
 include hardware/google/pixel/citadel/citadel.mk
 
-# power HAL
--include hardware/google/pixel/power-libperfmgr/aidl/device.mk
+# Power HAL
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.lineage-libperfmgr

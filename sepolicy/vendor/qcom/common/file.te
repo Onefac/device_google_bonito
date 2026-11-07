@@ -134,3 +134,6 @@ type vendor_grep_exec, exec_type, vendor_file_type, file_type;
 
 allow rootfs labeledfs:filesystem associate;
 allow vendor_firmware_file self:filesystem associate;
+
+# Power HAL
+type pps_socket, file_type;
