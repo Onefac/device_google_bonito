@@ -59,10 +59,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     chre_daemon_msm
 
-# Configstore
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Identity credential
 PRODUCT_PACKAGES += \
     android.hardware.identity_credential.xml
