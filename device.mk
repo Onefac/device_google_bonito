@@ -814,7 +814,12 @@ PRODUCT_VENDOR_PROPERTIES += ro.soc.model=SDM670
 
 include hardware/google/pixel/vibrator/drv2624/device.mk
 include hardware/google/pixel/mm/device_legacy.mk
-include device/google/gs-common/thermal/thermal_hal/device.mk
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.qti
+
+$(call soong_config_set,qti_thermal,netlink,false)
 
 # Citadel
 include hardware/google/pixel/citadel/citadel.mk
