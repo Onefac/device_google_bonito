@@ -22,9 +22,13 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/camera \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/qcom/sdm845 \
-    hardware/qcom/wlan/legacy \
+    hardware/qcom/sdm845/display \
+    hardware/qcom/sdm845/gps \
     hardware/qcom-caf/bootctrl \
+    hardware/qcom-caf/sdm845 \
+    hardware/qcom-caf/thermal-legacy-um \
+    hardware/qcom-caf/wlan \
+    hardware/qcom-caf/wlan/qcwcn \
     vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
 
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -27,8 +27,9 @@ from extract_utils.main import (
 namespace_imports = [
     'hardware/google/interfaces',
     'hardware/google/pixel',
-    'hardware/qcom/sdm845',
-    'hardware/qcom/wlan/legacy',
+    'hardware/qcom/sdm845/display',
+    'hardware/qcom/sdm845/gps',
+    'hardware/qcom-caf/wlan',
 ]
 
 
