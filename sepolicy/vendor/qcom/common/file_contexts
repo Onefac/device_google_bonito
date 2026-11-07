@@ -270,3 +270,4 @@
 
 # eSIM
 /sys/firmware/devicetree/base/chosen/cdt/cdb2/esim u:object_r:sysfs_esim:s0
+/dev/socket/pps                                 u:object_r:pps_socket:s0

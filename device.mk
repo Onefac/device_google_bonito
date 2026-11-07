@@ -29,6 +29,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/thermal-legacy-um \
     hardware/qcom-caf/wlan \
     hardware/qcom-caf/wlan/qcwcn \
+    hardware/lineage/interfaces/power-libperfmgr \
     vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -823,5 +824,6 @@ $(call soong_config_set,qti_thermal,netlink,false)
 # Citadel
 include hardware/google/pixel/citadel/citadel.mk
 
-# power HAL
--include hardware/google/pixel/power-libperfmgr/aidl/device.mk
+# Power HAL
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.lineage-libperfmgr

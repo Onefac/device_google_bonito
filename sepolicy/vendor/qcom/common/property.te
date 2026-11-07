@@ -34,3 +34,6 @@ vendor_internal_prop(vendor_time_service_prop)
 
 # vendor verbose logging property
 vendor_internal_prop(vendor_logging_prop)
+
+# Power HAL
+vendor_internal_prop(vendor_power_prop)
