@@ -17,7 +17,9 @@ AB_OTA_PARTITIONS := $(filter-out dtbo,$(AB_OTA_PARTITIONS))
 BOARD_DTBOIMG_PARTITION_SIZE :=
 
 # Manifests
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/lineage/config/device_framework_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
+    hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml
 
 # Partitions
 AB_OTA_PARTITIONS += \
