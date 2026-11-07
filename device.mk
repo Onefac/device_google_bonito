@@ -632,10 +632,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
   logd.logpersistd.size=30
 endif
 
-# Dumpstate HAL
-PRODUCT_PACKAGES += \
-    android.hardware.dumpstate@1.1-service.bonito
-
 # Storage: for factory reset protection feature
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/bootdevice/by-name/frp
