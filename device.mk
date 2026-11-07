@@ -346,6 +346,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.hwcomposer=qcom
 
+$(call soong_config_set_bool,qtidisplay,ion_abi_v2,true)
+
 PRODUCT_PACKAGES += \
     hwcomposer.qcom \
     android.hardware.graphics.composer@2.2-service \
