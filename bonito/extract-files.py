@@ -30,7 +30,7 @@ namespace_imports = [
     'hardware/google/pixel',
     'hardware/qcom/sdm845/display',
     'hardware/qcom/sdm845/gps',
-    'hardware/qcom/wlan/legacy',
+    'hardware/qcom-caf/wlan',
 ]
 
 

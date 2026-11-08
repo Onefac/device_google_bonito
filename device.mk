@@ -25,14 +25,9 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel/health \
     hardware/google/pixel/pixelstats \
     hardware/google/pixel/power-libperfmgr \
-    hardware/qcom/audio \
-    hardware/qcom/sdm845/display \
     hardware/qcom/sdm845/gps \
-    hardware/qcom/wlan/legacy \
-    hardware/qcom-caf/bootctrl \
     hardware/lineage/interfaces/power-libperfmgr \
-    system/chre/host/hal_generic \
-    vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
+    system/chre/host/hal_generic
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true
@@ -312,15 +307,21 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi_concurrency_cfg.txt:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wifi_concurrency_cfg.txt \
     $(LOCAL_PATH)/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini \
 
-PRODUCT_PACKAGES += \
-    hwcomposer.qcom \
-    android.hardware.graphics.composer@2.2-service \
-    gralloc.$(TARGET_CHIPSET) \
-    android.hardware.graphics.mapper@2.0-impl-qti-display \
-    vendor.qti.hardware.display.allocator@1.0-service
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.gralloc=qcom
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.hwcomposer=qcom
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@3.0-impl-qti-display \
+    gralloc.qcom \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    libqdMetaData \
+    libsdmcore \
+    libsdmutils \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor
 
 # Health HAL
 PRODUCT_PACKAGES += \

@@ -17,6 +17,10 @@ TARGET_KERNEL_VERSION := 4.19
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_DTBO_CFG := $(TARGET_KERNEL_SOURCE)/arch/arm64/boot/dts/google/dtboimg.cfg
 
+# Platform
+BOARD_USES_QCOM_HARDWARE := true
+USE_DEVICE_SPECIFIC_DATASERVICES := true
+
 # Manifests
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
