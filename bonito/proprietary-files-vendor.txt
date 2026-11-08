@@ -448,7 +448,6 @@ vendor/lib/libqcodec2.so
 vendor/lib/libqisl.so
 vendor/lib/libqti-utils.so
 vendor/lib/libqtikeymaster4.so
-vendor/lib/librpmb.so
 vendor/lib/libsdsprpc.so
 vendor/lib/libsecureui.so
 vendor/lib/libsecureui_svcsock.so
@@ -677,7 +676,6 @@ vendor/lib64/libqcodec2.so
 vendor/lib64/libqisl.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/libqtikeymaster4.so
-vendor/lib64/librpmb.so
 vendor/lib64/libsdsprpc.so
 vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
@@ -927,3 +925,7 @@ vendor/lib64/libsdm-diag.so|485ddce0e07299ede0960dc69f74a3b5532b515a
 vendor/lib64/libsdm-disp-vndapis.so|2f1abd975b1f1dbabcc410e56c29ac296adcc411
 vendor/lib64/libsdmextension.so|14d6992e63abcdef7c64ae3318513e138275d529
 vendor/lib64/libtinyxml2_1.so|fb0a2b16e5cfd28515268edc5c2345190d1ef4e5
+
+# RPMB - from laurel_sprout - RKQ1.200903.002
+vendor/lib/librpmb.so|cc130e0fe71d21122be8170b3f51bf9dae244d4b
+vendor/lib64/librpmb.so|a71c4f5bd6df0744a09e951a1fe55213391b8acd
