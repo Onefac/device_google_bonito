@@ -73,6 +73,11 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.fpc': blob_fixup()
         .replace_needed('android.frameworks.stats@1.0.so', 'lineage.frameworks.stats@1.0.so')
         .binary_regex_replace(b'_ZN7android10frameworks5stats', b'_ZN7lineage10frameworks5stats'),
+    (
+        'vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so',
+        'vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so',
+    ): blob_fixup()
+        .binary_regex_replace(rb'persist\.vendor\.qcom\.bluetooth\.soc\x00', b'vendor.qcom.bluetooth.soc\x00\x00\x00\x00\x00\x00\x00\x00\x00'),
     'vendor/lib64/android.hardware.keymaster@4.1-impl.nos.so': blob_fixup()
         .add_needed('libcrypto_shim.so'),
     'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()

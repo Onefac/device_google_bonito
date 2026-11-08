@@ -359,7 +359,6 @@ vendor/lib/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib/libGLESv2_adreno.so
 vendor/lib/egl/libQTapGLES.so
 vendor/lib/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib/hw/sound_trigger.primary.sdm710.so
 vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
@@ -576,7 +575,6 @@ vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
 vendor/lib64/egl/libQTapGLES.so
 vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
 vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/camera.sdm710.so
 vendor/lib64/hw/com.qti.chi.override.so
@@ -924,6 +922,10 @@ vendor/lib64/libsdm-diag.so|485ddce0e07299ede0960dc69f74a3b5532b515a
 vendor/lib64/libsdm-disp-vndapis.so|2f1abd975b1f1dbabcc410e56c29ac296adcc411
 vendor/lib64/libsdmextension.so|14d6992e63abcdef7c64ae3318513e138275d529
 vendor/lib64/libtinyxml2_1.so|fb0a2b16e5cfd28515268edc5c2345190d1ef4e5
+
+# Bluetooth - from laurel_sprout - RKQ1.200903.002
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|d2591d02f9ab3d43e1ee193e913ba77bf6021f10|b906b592d740e54f33c51b763063740af954cf46
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|727f8f808cd2e41f7288d312f57379f7bbd44d63|672e641a84a8ef6dfa4d51aaa169e76426eb0c5f
 
 # RPMB - from laurel_sprout - RKQ1.200903.002
 vendor/lib/librpmb.so|cc130e0fe71d21122be8170b3f51bf9dae244d4b
