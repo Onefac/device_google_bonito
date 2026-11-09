@@ -281,4 +281,5 @@
 # eSIM
 /sys/firmware/devicetree/base/chosen/cdt/cdb2/esim u:object_r:sysfs_esim:s0
 /dev/socket/pps                                 u:object_r:pps_socket:s0
+/dev/cpu_dma_latency                            u:object_r:latency_device:s0
 /dev/mmcblk0rpmb                                u:object_r:rpmb_device:s0

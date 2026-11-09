@@ -40,3 +40,4 @@ allow tee hal_display_config_hwservice:hwservice_manager find;
 allow tee graphics_device:chr_file rw_file_perms;
 allow tee rpmb_device:chr_file rw_file_perms;
 allowxperm tee rpmb_device:chr_file ioctl { MMC_IOC_CMD MMC_IOC_MULTI_CMD };
+wakelock_use(tee)

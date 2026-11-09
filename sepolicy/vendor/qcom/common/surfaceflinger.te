@@ -3,3 +3,4 @@ dontaudit surfaceflinger kernel:system module_request;
 dontaudit surfaceflinger vendor_default_prop:file read;
 userdebug_or_eng(`get_prop(surfaceflinger, vendor_display_prop)')
 allow surfaceflinger debugfs_ion:dir search;
+dontaudit surfaceflinger vendor_firmware_file:file r_file_perms;

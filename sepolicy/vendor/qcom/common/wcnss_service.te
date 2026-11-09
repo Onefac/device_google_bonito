@@ -43,3 +43,4 @@ r_dir_file(wcnss_service, sysfs_net)
 get_prop(wcnss_service, vendor_radio_sku_prop)
 
 dontaudit wcnss_service kernel:system module_request;
+r_dir_file(wcnss_service, sysfs_msm_subsys)

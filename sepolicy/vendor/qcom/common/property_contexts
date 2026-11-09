@@ -218,3 +218,5 @@ vendor.wifi.sniffer.start                     u:object_r:vendor_wifi_sniffer_pro
 
 # Vendor verbose logging prop
 persist.vendor.verbose_logging_enabled   u:object_r:vendor_logging_prop:s0
+vendor.display.                 u:object_r:vendor_display_prop:s0
+ro.vendor.display.              u:object_r:vendor_display_prop:s0

@@ -25,3 +25,4 @@ type xbl_block_device, dev_type;
 
 # TODO: Replace KM3 with KM4 (b/112339903)
 type rpmb_device, dev_type;
+type latency_device, dev_type;
