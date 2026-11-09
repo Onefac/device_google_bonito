@@ -153,7 +153,10 @@
 /vendor/bin/hw/android\.hardware\.health-service\.bonito             u:object_r:hal_health_default_exec:s0
 /vendor/bin/hw/vendor\.qti\.media\.c2@1\.0-service               u:object_r:mediacodec_exec:s0
 /vendor/bin/hw/hardware\.google\.media\.c2@1\.0-service-software u:object_r:mediacodec_exec:s0
-/vendor/bin/hw/vendor\.qti\.hardware\.display\.allocator@1\.0-service   u:object_r:hal_graphics_allocator_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.display\.allocator-service   u:object_r:hal_graphics_allocator_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.display\.composer-service    u:object_r:hal_graphics_composer_default_exec:s0
+/vendor/bin/hw/android\.hardware\.thermal-service\.qti             u:object_r:hal_thermal_default_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service            u:object_r:hal_vibrator_default_exec:s0
 /vendor/bin/hw/vendor\.google\.wireless_charger@1\.0-service-vendor       u:object_r:hal_wlc_exec:s0
 /vendor/bin/hw/vendor\.qti.hardware\.memtrack-service   u:object_r:hal_memtrack_default_exec:s0
 /vendor/bin/hw/android\.hardware\.boot-service\.qti     u:object_r:hal_bootctl_default_exec:s0
@@ -161,7 +164,13 @@
 ###############################################
 # same-process HAL files and their dependencies
 #
-/vendor/lib(64)?/hw/android\.hardware\.graphics\.mapper@2\.0-impl-qti-display\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/hw/android\.hardware\.graphics\.mapper@3\.0-impl-qti-display\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/hw/android\.hardware\.graphics\.mapper@4\.0-impl-qti-display\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/hw/gralloc\.qcom\.so      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libgralloc\.qti\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.qti\.hardware\.display\.mapperextensions@1\.[0-3]\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/vendor\.qti\.hardware\.display\.mapper@[1-4]\.[0-9]\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/android\.hardware\.graphics\.allocator@3\.0\.so   u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libgrallocutils\.so       u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libgralloccore\.so        u:object_r:same_process_hal_file:s0
 /vendor/lib(64)?/libqdMetaData\.so         u:object_r:same_process_hal_file:s0

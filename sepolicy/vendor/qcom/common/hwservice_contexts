@@ -23,3 +23,6 @@ vendor.nxp.nxpnfc::INxpNfc                                      u:object_r:nxpnf
 vendor.nxp.nxpese::INxpEse                                      u:object_r:nxpese_hwservice:s0
 vendor.google_paintbox::IManagerService                         u:object_r:hal_paintbox_hwservice:s0
 vendor.google.wireless_charger::IWirelessCharger                u:object_r:hal_wlc_hwservice:s0
+vendor.qti.hardware.display.allocator::IQtiAllocator             u:object_r:hal_graphics_allocator_hwservice:s0
+vendor.qti.hardware.display.mapper::IQtiMapper                   u:object_r:hal_graphics_mapper_hwservice:s0
+vendor.qti.hardware.display.composer::IQtiComposer              u:object_r:hal_graphics_composer_hwservice:s0
