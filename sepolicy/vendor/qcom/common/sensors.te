@@ -11,6 +11,7 @@ allow sensors self:capability {
 };
 
 allow sensors self:socket create_socket_perms;
+allow sensors self:qipcrtr_socket create_socket_perms_no_ioctl;
 allowxperm sensors self:socket ioctl msm_sock_ipc_ioctls;
 
 allow sensors persist_sensors_file:dir rw_dir_perms;

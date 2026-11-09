@@ -28,6 +28,7 @@ allow hal_rcsservice sysfs_timestamp_switch:file r_file_perms;
 #required for socket creation
 unix_socket_connect(hal_rcsservice, ims, ims)
 allow hal_rcsservice self:socket create_socket_perms;
+allow hal_rcsservice self:qipcrtr_socket create_socket_perms_no_ioctl;
 allowxperm hal_rcsservice self:socket ioctl msm_sock_ipc_ioctls;
 
 # imsrcsd to bind with UceShimService.apk

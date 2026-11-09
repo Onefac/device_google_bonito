@@ -20,6 +20,7 @@ add_hwservice(rild, hal_iwlan_hwservice)
 add_hwservice(rild, hal_dataconnection_hwservice)
 
 allow rild self:socket ioctl;
+allow rild self:qipcrtr_socket create_socket_perms_no_ioctl;
 allowxperm rild self:socket ioctl msm_sock_ipc_ioctls;
 allow rild time_daemon:unix_stream_socket connectto;
 

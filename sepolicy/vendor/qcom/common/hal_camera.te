@@ -33,6 +33,7 @@ allow hal_camera audio_device:dir search;
 allow hal_camera system_server:unix_stream_socket { read write };
 
 allow hal_camera self:socket { create ioctl read write };
+allow hal_camera self:qipcrtr_socket create_socket_perms_no_ioctl;
 
 # allow hal_camera to call some socket ioctls
 allowxperm hal_camera self:socket ioctl { IPC_ROUTER_IOCTL_LOOKUP_SERVER IPC_ROUTER_IOCTL_BIND_CONTROL_PORT };
