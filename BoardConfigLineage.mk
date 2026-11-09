@@ -20,6 +20,10 @@ BOARD_DTBO_CFG := $(TARGET_KERNEL_SOURCE)/arch/arm64/boot/dts/google/dtboimg.cfg
 # Camera
 TARGET_USES_YCRCB_VENUS_CAMERA_PREVIEW := true
 
+# Graphics
+SOONG_CONFIG_qtidisplay_target_no_camera_custom_format := true
+SOONG_CONFIG_qtidisplay_target_uses_legacy_buffer_alignment := true
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 USE_DEVICE_SPECIFIC_DATASERVICES := true
