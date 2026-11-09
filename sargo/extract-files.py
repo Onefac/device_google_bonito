@@ -71,6 +71,10 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.fpc': blob_fixup()
         .replace_needed('android.frameworks.stats@1.0.so', 'lineage.frameworks.stats@1.0.so')
         .binary_regex_replace(b'_ZN7android10frameworks5stats', b'_ZN7lineage10frameworks5stats'),
+    'vendor/lib/libqcodec2_utils.so': blob_fixup()
+        .binary_regex_replace(rb'\x00\x23\xc1\xf2\x34\x03', b'\x00\x23\xc1\xf2\x36\x03')
+        .binary_regex_replace(rb'\xdf\xe8\x02\xf0\x04\x1e\x17\x1e', b'\xdf\xe8\x02\xf0\x17\x1e\x17\x1e')
+        .binary_regex_replace(rb'\xdf\xe8\x02\xf0\x15\x1e\x04\x1e', b'\xdf\xe8\x02\xf0\x04\x1e\x04\x1e'),
     (
         'vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so',
         'vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so',
