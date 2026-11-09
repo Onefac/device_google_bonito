@@ -372,6 +372,9 @@ on early-boot
     chown system system /sys/class/leds/red/rgb_start
     chown system system /sys/class/leds/green/rgb_start
     chown system system /sys/class/leds/blue/rgb_start
+    chown system system /sys/class/leds/vibrator/activate
+    chown system system /sys/class/leds/vibrator/duration
+    chown system system /sys/class/leds/vibrator/state
     chown system system /sys/class/backlight/panel0-backlight/brightness
 
     # Permission for Wireless charger
