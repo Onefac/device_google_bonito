@@ -707,12 +707,6 @@ on property:sys.retaildemo.enabled=1
 on property:ro.boot.hardware.radio.subtype=0
     setprop audio.camerasound.force true
 
-# Touch
-on property:vendor.all.modules.ready=1
-    wait /sys/devices/platform/soc/a84000.i2c/i2c-2/2-0020/input/input2/read_report
-    chown system system /sys/devices/platform/soc/a84000.i2c/i2c-2/2-0020/input/input2/read_report
-    chown system system /sys/devices/platform/soc/a84000.i2c/i2c-2/2-0020/input/input2/suspend
-
 # DSDS feature
 # Restart 1st qcrild after SIM config changed
 on property:vendor.radio.sim_num.switch=1to2 && property:persist.radio.multisim.config=dsds

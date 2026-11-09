@@ -134,3 +134,7 @@ firmware_directories /vendor/firmware_mnt/image/
 # Charger
 /sys/class/power_supply/battery charge_disable 0660 system system
 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/battery charge_disable 0660 system system
+
+# Touch
+/sys/devices/platform/soc/a84000.i2c/i2c-2/2-0020/input/input* read_report 0664 system system
+/sys/devices/platform/soc/a84000.i2c/i2c-2/2-0020/input/input* suspend     0220 system system
