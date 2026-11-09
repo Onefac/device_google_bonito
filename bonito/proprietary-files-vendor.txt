@@ -30,7 +30,6 @@ vendor/bin/msm_irqbalance
 vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/bin/qseecomd
-vendor/bin/ramoops
 vendor/bin/sensors.qti
 vendor/bin/ssr_diag
 vendor/bin/ssr_setup
@@ -134,7 +133,6 @@ vendor/etc/init/android.hardware.sensors@2.0-service.rc
 vendor/etc/init/android.hardware.weaver@1.0-service.citadel.rc
 vendor/etc/init/citadeld.rc
 vendor/etc/init/easelmanagerd.rc
-vendor/etc/init/init-ramoops.rc
 vendor/etc/init/init.time_daemon.rc
 vendor/etc/init/init_citadel.rc
 vendor/etc/init/rebootescrow-citadel.rc
