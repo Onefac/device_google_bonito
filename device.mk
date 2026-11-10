@@ -202,17 +202,23 @@ PRODUCT_COPY_FILES += \
 # Audio fluence, ns, aec property, voice and media volume steps
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.audio.sdk.fluencetype=fluencepro \
-    persist.audio.fluence.voicecall=true \
-    persist.audio.fluence.speaker=true \
-    persist.audio.fluence.voicecomm=true \
-    persist.audio.fluence.voicerec=false \
-    persist.audio.dualmic.config=endfire \
-    persist.audio.in_mmap_delay_micros=100 \
-    persist.audio.out_mmap_delay_micros=150 \
+    persist.vendor.audio.fluence.voicecall=true \
+    persist.vendor.audio.fluence.speaker=true \
+    persist.vendor.audio.fluence.voicecomm=true \
+    persist.vendor.audio.fluence.voicerec=false \
+    persist.vendor.audio.dualmic.config=endfire \
+    persist.vendor.audio.in_mmap_delay_micros=100 \
+    persist.vendor.audio.out_mmap_delay_micros=150 \
     ro.config.vc_call_vol_steps=7 \
     ro.config.media_vol_steps=25 \
     vendor.audio.offload.gapless.enabled=true \
+    vendor.audio.feature.a2dp_offload.enable=true \
+    vendor.audio.feature.fluence.enable=true \
+    vendor.audio.feature.hwdep_cal.enable=true \
     vendor.audio.feature.multi_voice_session.enable=true \
+    vendor.audio.feature.snd_mon.enable=true \
+    vendor.audio.feature.spkr_prot.enable=true \
+    vendor.audio.feature.usb_offload.enable=true \
 
 # MaxxAudio effect and add rotation monitor
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -469,6 +475,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     audio.primary.sdm710 \
+    liba2dpoffload \
+    libcirrusspkrprot \
+    libsndmonitor \
     audio.usb.default \
     audio.r_submix.default \
     libaudio-resampler \

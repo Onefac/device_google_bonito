@@ -46,13 +46,6 @@ audio.volume.listener.dump  u:object_r:vendor_default_prop:s0
 audio.volume.headset.gain.depcal  u:object_r:vendor_default_prop:s0
 fpc_kpi                    u:object_r:vendor_default_prop:s0
 persist.audio.calfile0     u:object_r:vendor_default_prop:s0
-persist.audio.dualmic.config  u:object_r:vendor_default_prop:s0
-persist.audio.fluence.speaker  u:object_r:vendor_default_prop:s0
-persist.audio.fluence.voicecall  u:object_r:vendor_default_prop:s0
-persist.audio.fluence.voicecomm  u:object_r:vendor_default_prop:s0
-persist.audio.fluence.voicerec  u:object_r:vendor_default_prop:s0
-persist.audio.in_mmap_delay_micros  u:object_r:vendor_default_prop:s0
-persist.audio.out_mmap_delay_micros  u:object_r:vendor_default_prop:s0
 persist.cne.override.memlimit  u:object_r:vendor_default_prop:s0
 persist.data_netmgrd_mtu   u:object_r:vendor_default_prop:s0
 persist.data.df.agg.dl_pad  u:object_r:vendor_default_prop:s0

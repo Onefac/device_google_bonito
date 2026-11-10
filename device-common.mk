@@ -83,15 +83,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 
 # Audio
-$(call soong_config_set,qtiaudio,feature_24bits_camcorder,true)
-$(call soong_config_set,qtiaudio,feature_a2dp_offload,true)
-$(call soong_config_set,qtiaudio,feature_cirrus_spkr_protection,true)
-$(call soong_config_set,qtiaudio,feature_flicker_sensor_input,true)
-$(call soong_config_set,qtiaudio,feature_hwdep_cal,true)
-$(call soong_config_set,qtiaudio,feature_maxx_audio,true)
-$(call soong_config_set,qtiaudio,feature_multi_voice_sessions,true)
-$(call soong_config_set,qtiaudio,feature_snd_monitor,true)
-$(call soong_config_set,qtiaudio,feature_usb_tunnel,true)
 $(call soong_config_set,qtiaudio,feature_sound_trigger,true)
 
 # Modem loging file
