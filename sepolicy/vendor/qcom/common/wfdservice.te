@@ -1,0 +1,3 @@
+allow wfdservice hal_display_config_hwservice:hwservice_manager find;
+allow wfdservice hal_wifidisplay_hwservice:hwservice_manager find;
+binder_call(wfdservice, wifidisplayhalservice)

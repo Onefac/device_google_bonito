@@ -1,0 +1,1 @@
+/(system_ext|system/system_ext)/bin/wfdservice      u:object_r:wfdservice_exec:s0

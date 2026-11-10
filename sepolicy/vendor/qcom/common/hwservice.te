@@ -13,3 +13,4 @@ type nxpnfc_hwservice, hwservice_manager_type, vendor_hwservice_type;
 type hal_tui_comm_hwservice, hwservice_manager_type, vendor_hwservice_type;
 type hal_paintbox_hwservice, hwservice_manager_type, vendor_hwservice_type;
 type hal_wlc_hwservice, hwservice_manager_type, vendor_hwservice_type;
+type hal_wifidisplay_hwservice, hwservice_manager_type, protected_hwservice, vendor_hwservice_type;

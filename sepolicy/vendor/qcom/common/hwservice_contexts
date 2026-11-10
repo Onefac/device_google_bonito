@@ -26,3 +26,7 @@ vendor.google.wireless_charger::IWirelessCharger                u:object_r:hal_w
 vendor.qti.hardware.display.allocator::IQtiAllocator             u:object_r:hal_graphics_allocator_hwservice:s0
 vendor.qti.hardware.display.mapper::IQtiMapper                   u:object_r:hal_graphics_mapper_hwservice:s0
 vendor.qti.hardware.display.composer::IQtiComposer              u:object_r:hal_graphics_composer_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySession              u:object_r:hal_wifidisplay_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionAudioTrack    u:object_r:hal_wifidisplay_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionImageTrack    u:object_r:hal_wifidisplay_hwservice:s0
+vendor.qti.hardware.wifidisplaysession::IWifiDisplaySessionVideoTrack    u:object_r:hal_wifidisplay_hwservice:s0

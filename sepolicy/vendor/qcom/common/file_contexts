@@ -139,6 +139,7 @@
 /vendor/bin/mm-pp-dpps          u:object_r:mm-pp-daemon_exec:s0
 /vendor/bin/grep                u:object_r:vendor_grep_exec:s0
 /vendor/bin/wifi_sniffer        u:object_r:wifi_sniffer_exec:s0
+/vendor/bin/wifidisplayhalservice    u:object_r:wifidisplayhalservice_exec:s0
 
 /vendor/bin/hw/android\.hardware\.drm@[0-9]+\.[0-9]+-service\.widevine         u:object_r:hal_drm_widevine_exec:s0
 /vendor/bin/hw/android\.hardware\.drm@[0-9]+\.[0-9]+-service-lazy\.widevine         u:object_r:hal_drm_widevine_exec:s0

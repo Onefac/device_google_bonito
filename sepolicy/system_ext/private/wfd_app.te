@@ -1,0 +1,14 @@
+app_domain(wfd_app)
+net_domain(wfd_app)
+
+binder_call(wfd_app, wfdservice)
+
+allow wfd_app {
+    app_api_service
+    audioserver_service
+    mediametrics_service
+    mediaserver_service
+    wfdservice_service
+}:service_manager find;
+
+set_prop(wfd_app, wfd_service_prop)

@@ -1,0 +1,25 @@
+type wfdservice_exec, system_file_type, exec_type, file_type;
+
+init_daemon_domain(wfdservice)
+net_domain(wfdservice)
+
+binder_use(wfdservice)
+hwbinder_use(wfdservice)
+
+add_service(wfdservice, wfdservice_service)
+
+binder_call(wfdservice, audioserver)
+binder_call(wfdservice, surfaceflinger)
+binder_call(wfdservice, system_server)
+binder_call(wfdservice, wfd_app)
+
+allow wfdservice {
+    audioserver_service
+    permission_service
+    surfaceflinger_service
+}:service_manager find;
+
+hal_client_domain(wfdservice, hal_graphics_allocator)
+hal_client_domain(wfdservice, hal_graphics_composer)
+
+allow wfdservice ion_device:chr_file r_file_perms;

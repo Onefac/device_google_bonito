@@ -1,0 +1,32 @@
+type wifidisplayhalservice, domain;
+type wifidisplayhalservice_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(wifidisplayhalservice)
+net_domain(wifidisplayhalservice)
+
+hwbinder_use(wifidisplayhalservice)
+vndbinder_use(wifidisplayhalservice)
+get_prop(wifidisplayhalservice, hwservicemanager_prop)
+add_hwservice(wifidisplayhalservice, hal_wifidisplay_hwservice)
+
+binder_call(wifidisplayhalservice, wfdservice)
+
+hal_client_domain(wifidisplayhalservice, hal_graphics_allocator)
+hal_client_domain(wifidisplayhalservice, hal_graphics_composer)
+allow wifidisplayhalservice hal_display_config_hwservice:hwservice_manager find;
+
+allow wifidisplayhalservice self:capability net_raw;
+allow wifidisplayhalservice self:netlink_generic_socket create_socket_perms_no_ioctl;
+allow wifidisplayhalservice self:udp_socket create_socket_perms;
+allowxperm wifidisplayhalservice self:udp_socket ioctl priv_sock_ioctls;
+allow wifidisplayhalservice proc_net:file r_file_perms;
+
+allow wifidisplayhalservice audio_device:dir r_dir_perms;
+allow wifidisplayhalservice audio_device:chr_file rw_file_perms;
+r_dir_file(wifidisplayhalservice, proc_asound)
+
+allow wifidisplayhalservice ion_device:chr_file r_file_perms;
+allow wifidisplayhalservice video_device:chr_file rw_file_perms;
+allow wifidisplayhalservice uhid_device:chr_file rw_file_perms;
+
+crash_dump_fallback(wifidisplayhalservice)

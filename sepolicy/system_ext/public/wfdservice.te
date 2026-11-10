@@ -1,0 +1,2 @@
+# Qualcomm Wi-Fi Display service (wfdservice)
+type wfdservice, domain, coredomain;

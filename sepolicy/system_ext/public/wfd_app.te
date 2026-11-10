@@ -1,0 +1,2 @@
+# Qualcomm Wi-Fi Display app (com.qualcomm.wfd.service)
+type wfd_app, domain, coredomain;
