@@ -30,7 +30,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 # Reserve space for gapps install
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 ifneq ($(WITH_GMS),true)
-BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1048576000
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 943718400
 endif
 
 # SELinux
